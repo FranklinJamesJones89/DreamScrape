@@ -2,4 +2,10 @@
 	<h1>Logo</h1>
 </a>
 
+<form method='GET' action="{% url 'dreams:home' %}">
+	<input type='text' name='q' placeholder="Explore Dreams..."/>
+</form>
+
+<a href="{% url 'dreams:login' %}">Login</a>
+
 <hr>
