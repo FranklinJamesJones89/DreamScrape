@@ -1,10 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>DreamScrape</title>
 </head>
-<body>
+<body id="bg"style="background-image:url('{% static "dreams/img/main-img.jpg" %}'); background-repeat:no-repeat; background-size:cover;">
+
 	{% include 'dreams/navbar.html' %}	
 	
 	{% block content %}
