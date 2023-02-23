@@ -2,17 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>DreamScrape</title>
+<meta charset="UTF-8">
+<title>DreamScrape</title>
+<link rel="stylesheet" href={% static 'dreams/css/styles.css' %}>
 </head>
-<body id="bg"style="background-image:url('{% static "dreams/img/main-img.jpg" %}'); background-repeat:no-repeat; background-size:cover;">
+<body id="bg"style="background-image:url('{% static "dreams/img/rabbit.jpg" %}'); background-repeat:no-repeat; background-size:cover;">
 
-	{% include 'dreams/navbar.html' %}	
-	
-	{% block content %}
+{% include 'dreams/navbar.html' %}	
 
-	
-	{% endblock content %}
+{% block content %}
+
+
+{% endblock content %}
 
 </body>
 </html>
