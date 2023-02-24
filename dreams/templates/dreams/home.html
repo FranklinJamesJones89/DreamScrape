@@ -20,7 +20,7 @@
   </div>
 
   <div>
-    {% if room_count <= 1 %}
+    {% if room_count == 1 %}
     
     <h5>{{ room_count }} dream that would await me...</h5>
    
@@ -46,6 +46,22 @@
         </div>
       {% endfor %}
     </div>
+  </div>
+
+  <div>
+    <h3>Last night's dreams</h3>
+    <hr>
+    {% for message in room_messages %}
+    <div>
+      <small>@{{ message.user }} {{ message.created|timesince }}</small>
+      <small>replied to "{{ message.room }}"</small>
+      <p>{{ message }}</p>
+	{% if request.user == message.user %}
+	<a href={% url 'dreams:delete-message' message.id %}>Delete</a>
+	{% endif %}
+	<hr>
+    </div>
+    {% endfor %}
   </div>
 
 </div>
