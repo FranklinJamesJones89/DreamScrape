@@ -1,0 +1,12 @@
+<h3>Explore Dreams</h3>
+<hr>
+	
+	<div>
+		<a href="{% url 'dreams:home' %}">All</a>
+	</div>
+
+{% for topic in topics %}
+	<div>
+		<a href="{% url 'dreams:home' %}?q={{ topic.name }}">{{ topic.name  }}</a>
+	</div>
+{% endfor %}

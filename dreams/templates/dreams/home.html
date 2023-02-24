@@ -5,18 +5,7 @@
 <div class='home-container'>
   
   <div>
-    <h3>Explore Dreams</h3>
-    <hr>
-      
-      <div>
-        <a href="{% url 'dreams:home' %}">All</a>
-      </div>
-
-    {% for topic in topics %}
-      <div>
-        <a href="{% url 'dreams:home' %}?q={{ topic.name }}">{{ topic.name  }}</a>
-      </div>
-    {% endfor %}
+   {% include 'dreams/topics_component.html' %}
   </div>
 
   <div>
@@ -32,36 +21,12 @@
 
     <a href="{% url 'dreams:create-room' %}">Create Room</a>
 
-    <div>
-      {% for room in rooms %}
-        <div>
-	 {% if request.user == room.host %}
-          <a href="{% url 'dreams:update-room' room.id %}">Edit</a>
-	  <a href="{% url 'dreams:delete-room' room.id %}">Delete</a>
-	 {% endif %}
-          <span>@{{room.host.username}}</span>
-          <h5>{{ room.id }} -- <a href="{% url 'dreams:room' room.id%}">{{ room.name }}</a></h5>
-          <small>{{ room.topic.name }}</small>
-          <hr>
-        </div>
-      {% endfor %}
-    </div>
+    {% include 'dreams/feed_component.html' %}
+
   </div>
 
   <div>
-    <h3>Last night's dreams</h3>
-    <hr>
-    {% for message in room_messages %}
-    <div>
-      <small>@{{ message.user }} {{ message.created|timesince }}</small>
-      <small>replied to "{{ message.room }}"</small>
-      <p>{{ message }}</p>
-	{% if request.user == message.user %}
-	<a href={% url 'dreams:delete-message' message.id %}>Delete</a>
-	{% endif %}
-	<hr>
-    </div>
-    {% endfor %}
+    {% include 'dreams/activity_component.html' %}
   </div>
 
 </div>
