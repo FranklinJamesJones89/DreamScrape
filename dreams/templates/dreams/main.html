@@ -10,6 +10,14 @@
 
 {% include 'dreams/navbar.html' %}	
 
+{% if messages %}
+<ul class='mesages'>
+  {% for message in messages %}
+  <li></li>{{ message }}
+  {% endfor %}
+</ul>
+{% endif %}
+
 {% block content %}
 
 

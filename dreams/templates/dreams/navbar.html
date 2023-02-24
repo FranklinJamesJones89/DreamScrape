@@ -6,6 +6,10 @@
 	<input type='text' name='q' placeholder="Explore Dreams..."/>
 </form>
 
+{% if request.user.is_authenticated %}
+<a href="{% url 'dreams:logout' %}">Logout</a>
+{% else %}
 <a href="{% url 'dreams:login' %}">Login</a>
+{% endif %}
 
 <hr>

@@ -2,18 +2,18 @@
 
 {% block content %}
 
-<div class="">
-	<form method="POST" action="">
-		{% csrf_token %}
-		
-		<label>Username:</label>
-		<input type="text" name="username" placeholder="Enter Username">
-		
-		<label>Password:</label>
-		<input type="password" value="password" placeholder="Enter Password">
+<div>
+<form method="POST" action="">
+	{% csrf_token %}
 	
-		<input type="submit" value="Login">
-	</form>
+	<label>Username:</label>
+	<input type="text" name="username" placeholder="Enter Username">
+	
+	<label>Password:</label>
+	<input type="password" name="password" placeholder="Enter Password">
+
+	<input type="submit" value="Login">
+</form>
 </div>
 
 
