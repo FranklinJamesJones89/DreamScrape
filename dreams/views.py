@@ -71,6 +71,7 @@ def create_room(request):
     context = {'form': form}
     return render(request, 'dreams/room_form.html', context)
 
+@login_required(login_url='dreams:login')
 def update_room(request, pk):
     room = Room.objects.get(id = pk)
     form = RoomForm(instance = room)
@@ -85,6 +86,7 @@ def update_room(request, pk):
 
     return render(request, 'dreams/room_form.html', context)
 
+@login_required(login_url='dreams:login')
 def delete_room(request, pk):
     room = Room.objects.get(id = pk)
     
