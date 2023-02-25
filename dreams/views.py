@@ -94,8 +94,13 @@ def room(request, pk):
     
     return render(request, 'dreams/room.html', context)
 
-def user_profile(request):
-    return render(request, 'dreams/profile.html')
+def userProfile(request, pk):
+    user = User.objects.get(id=pk)
+    rooms = user.room_set.all()
+    room_messages = user.message_set.all()
+    topics = Topic.objects.all()
+    context = {'user': user, 'rooms': rooms, 'room_messages': room_messages}
+    return render(request, 'dreams/profile.html', context)
 
 @login_required(login_url='dreams:login')
 def create_room(request):
