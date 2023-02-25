@@ -1,0 +1,33 @@
+{% extends 'dreams/main.html' %}
+
+{% block content %}
+
+<div class='home-container'>
+  
+  <div>
+   {% include 'dreams/topics_component.html' %}
+  </div>
+
+  <div>
+    {% if room_count == 1 %}
+    
+    <h5>{{ room_count }} dream that would await me...</h5>
+   
+    {% else %}
+   
+    <h5>{{ room_count }} dreams that would await me...</h5>
+   
+    {% endif %}
+
+    <a href="{% url 'dreams:create-room' %}">Create Room</a>
+
+    {% include 'dreams/feed_component.html' %}
+  </div>
+
+  <div>
+    {% include 'dreams/activity_component.html' %}
+  </div>
+
+</div>
+
+{% endblock content %}
