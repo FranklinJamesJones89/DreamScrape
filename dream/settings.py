@@ -34,6 +34,9 @@ INSTALLED_APPS = [
     # Site apps
     'dreams.apps.DreamsConfig',
 
+    # REST
+    'rest_framework',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
