@@ -12,6 +12,9 @@
   --color-bg: #2d2d39;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
+	--color-azure: #F0FFFF;
+	--color-black: #000000;
+	--color-cornflower: #6495ED;
 }
 
 /*========== base styles ==========*/
@@ -87,7 +90,7 @@ a {
 .btn--link {
   border-radius: 0;
   padding: 0;
-  color: var(--color-main);
+  color: var(--color-azure);
   box-shadow: none;
 }
 
@@ -96,7 +99,7 @@ a {
 }
 
 .btn--main {
-  background-color: var(--color-main);
+  background-color: var(--color-azure);
   color: var(--color-dark);
 }
 
@@ -120,9 +123,9 @@ a {
   font-size: 1.4rem;
   font-weight: 700;
   padding: 6px 2.5rem;
-  color: var(--color-main);
+  color: var(--color-azure);
   background: transparent;
-  border: 2px solid var(--color-main);
+  border: 2px solid var(--color-azure);
 }
 
 .action-button {
@@ -136,7 +139,7 @@ a {
   position: relative;
   display: inline-block;
   border-radius: 50%;
-  border: 2px solid var(--color-main);
+  border: 2px solid var(--color-azure);
 }
 
 .avatar img {
@@ -163,6 +166,7 @@ a {
 .avatar.avatar--small img {
   width: 2.8rem;
   height: 2.8rem;
+	border: 2px solid var(--color-cornflower);
 }
 
 .avatar.avatar--small:after {
@@ -291,7 +295,7 @@ a {
 .header__logo > h1 {
   font-weight: 700;
   font-size: 2rem;
-  color: var(--color-light);
+  color: var(--color-azure);
 }
 
 .header__search > label {
@@ -351,7 +355,7 @@ a {
   align-items: center;
   font-weight: 500;
   text-decoration: none;
-  color: var(--color-gray);
+  color: var(--color-azure);
 }
 
 .header__menu img {
@@ -363,7 +367,7 @@ a {
 }
 
 .header__menu span {
-  color: var(--color-main);
+  color: var(--color-azure);
   font-weight: 500;
   font-size: 1.4rem;
   display: block;
@@ -430,7 +434,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -46%);
-  background-color: var(--color-dark);
+  background-color: var(--color-black);
   border-radius: 1rem;
   box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -439,7 +443,7 @@ a {
 .layout__boxHeader {
   display: flex;
   padding: 1.5rem;
-  background-color: var(--color-dark-light);
+  background-color: var(--color-azure);
 }
 
 .layout__boxTitle {
@@ -457,7 +461,7 @@ a {
 .layout__boxTitle svg {
   width: 1.6rem;
   height: 1.6rem;
-  fill: var(--color-main);
+  fill: var(--color-azure);
 }
 
 .layout__body {
@@ -499,7 +503,7 @@ a {
 .form__group textarea,
 .form__group select {
   background: transparent;
-  border: 1px solid var(--color-dark-light);
+  border: 1px solid var(--color-azure);
   padding: 1rem;
   border-radius: 3px;
   width: 100%;
@@ -577,18 +581,18 @@ a {
   justify-content: space-between;
   margin-bottom: 3rem;
   font-weight: 500;
-  color: var(--color-light-gray);
+  color: var(--color-azure);
   transition: all 0.3s ease-in-out;
 }
 
 .topics__list li a.active,
 .topics__list li a:hover {
-  color: var(--color-main);
+  color: var(--color-azure);
 }
 
 .topics__list li a span {
   padding: 0.5rem 1rem;
-  background-color: var(--color-dark);
+  /*background-color: var(--color-dark);*/
   border-radius: 3px;
   font-size: 1.3rem;
   font-weight: 700;
@@ -626,12 +630,13 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.4rem;
+	color: var(--color-black);
 }
 
 .roomList__header h2 {
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--color-light);
+  color: var(--color-azure);
   letter-spacing: 1px;
 }
 
@@ -644,7 +649,7 @@ a {
 
 .roomListRoom {
   margin-bottom: 2.4rem;
-  background-color: var(--color-dark);
+  background-color: var(--color-azure);
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -653,6 +658,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+	color: var(--color-black);
 }
 
 .roomListRoom__author {
@@ -660,6 +666,7 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
+	color: var(--color-black);
 }
 
 .roomListRoom__actions {
@@ -671,6 +678,7 @@ a {
 
 .roomListRoom__actions span {
   font-size: 1.4rem;
+	color: var(--color-black);
   font-weight: 500;
 }
 
@@ -689,12 +697,12 @@ a {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: var(--color-light);
+  color: var(--color-black);
   transition: all 0.3s ease-in-out;
 }
 
 .roomListRoom__content a:hover {
-  color: var(--color-main);
+  color: var(--color-cornflower);
 }
 
 .roomListRoom__meta {
@@ -706,7 +714,7 @@ a {
 }
 
 .roomListRoom__joined {
-  color: var(--color-light-gray);
+  color: var(--color-black);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -715,17 +723,18 @@ a {
 }
 
 .roomListRoom__joined svg {
-  fill: var(--color-main);
+  fill: var(--color-black);
   width: 1.6rem;
   height: 1.6rem;
 }
 
 .roomListRoom__topic {
   padding: 5px 1.5rem;
-  background-color: var(--color-dark-medium);
+  background-color: var(--color-black);
   border-radius: 5rem;
   font-weight: 500;
   font-size: 1.3rem;
+	color: var(--color-azure);
 }
 
 /*==============================
@@ -733,17 +742,17 @@ a {
 ================================*/
 
 .activities {
-  background: var(--color-dark);
+  background: var(--color-azure);
   border-radius: 5px;
   overflow: hidden;
 }
 
 .activities__header h2 {
-  background-color: var(--color-dark-light);
+  background-color: var(--color-black);
   text-transform: uppercase;
   font-weight: 500;
   padding: 1rem 1.5rem;
-  color: var(--color-light);
+  color: var(--color-azure);
   letter-spacing: 1px;
   font-size: 1.4rem;
 }
@@ -761,17 +770,20 @@ a {
 }
 
 .activities__boxHeader p span {
-  color: var(--color-gray);
+  color: var(--color-black);
   font-size: 1.2rem;
   display: block;
 }
 
 .activities__boxContent {
   margin-left: 4.2rem;
+	color: var(--color-black);
+	
 }
 
 .activities__boxContent {
   font-size: 1.4rem;
+	color: var(--color-black);
 }
 
 .activities__boxContent a:hover {
@@ -779,11 +791,12 @@ a {
 }
 
 .activities__boxRoomContent {
-  background: var(--color-bg);
+  background: var(--color-black);
   padding: 1rem;
   border-radius: 5px;
   margin-top: 1rem;
   margin-left: -4.2rem;
+	color: var(--color-azure);
 }
 
 .roomListRoom__actions svg {
@@ -873,18 +886,19 @@ a {
 }
 
 .profile__info p {
-  color: var(--color-main);
+  color: var(--color-azure);
   font-weight: 500;
   margin-bottom: 1rem;
 }
 
 .profile__about {
   margin-top: 2rem;
+	color: var(--color-azure);
 }
 
 .profile__about h3 {
   text-transform: uppercase;
-  color: var(--color-dark-light);
+  color: var(--color-azure);
   margin-bottom: 0.5rem;
 }
 
@@ -921,7 +935,7 @@ a {
 
 .room__top,
 .participants__top {
-  background: var(--color-dark-light);
+  background: var(--color-black);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -970,7 +984,7 @@ a {
   overflow-y: auto;
   position: absolute;
   width: 95%;
-  background: var(--color-dark);
+  background: var(--color-azure);
   z-index: 999;
   top: 4.4rem;
   padding-top: 2rem;

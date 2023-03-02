@@ -36,6 +36,9 @@ INSTALLED_APPS = [
 
     # REST
     'rest_framework',
+    
+    # CORS
+    'corsheaders',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +49,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # Custom MIDDLEWARE,
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTH_USER_MODEL = 'dreams.User'
 
 ROOT_URLCONF = 'dream.urls'
 
@@ -124,10 +132,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/img/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'dreams/static/'
 ]
+
+MEDIA_ROOT = BASE_DIR / 'dreams/static/dreams/img'
 
 #STATIC_ROOT =
 
@@ -136,3 +147,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+
